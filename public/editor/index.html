@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excelsior Editor</title>
+    <script src="https://unpkg.com/yamljs@0.3.0/dist/yaml.min.js"></script>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
+    <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
+  </head>
+  <body>
+    <div id="nc-root"></div>
+    <script>
+      fetch('/editor/editor-config.yml')
+        .then(res => res.text())
+        .then(config => {
+          window.CMS.init({ config: window.YAML.parse(config) });
+        });
+    </script>
+  </body>
+</html>
