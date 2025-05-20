@@ -2,7 +2,6 @@ backend:
   name: github
   repo: zeta976/excelsior
   branch: main
-  base_url: https://dev-qqh8qqafdmh24a3x.us.auth0.com
   auth_type: implicit
   app_id: Ov23liAjzeTHyx70cWYV
 
